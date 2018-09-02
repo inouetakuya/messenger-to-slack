@@ -13,6 +13,15 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+ENV['ENV'] = 'test'
+
+require File.expand_path('../../config/environment', __FILE__)
+
+Dir[File.join(MessengerToSlack::ROOT_PATH, 'spec/support/**/*.rb')].each do |file|
+  require file
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
