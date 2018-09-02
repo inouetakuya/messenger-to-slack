@@ -1,6 +1,8 @@
 Messenger to Slack
 ==================
 
+[![CircleCI](https://circleci.com/gh/inouetakuya/messenger-to-slack.svg?style=svg)](https://circleci.com/gh/inouetakuya/messenger-to-slack)
+
 Convert message.json of Facebook Messenger to CSV file to import to Slack
 
 ## Requirements
