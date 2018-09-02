@@ -42,3 +42,9 @@ bundle exec thor task:message:convert
 ### Step 4. Import CSV to Slack
 
 Access to [https://my.slack.com/services/import/csv](https://my.slack.com/services/import/csv)
+
+## Testing
+
+```
+bundle exec rspec
+```
