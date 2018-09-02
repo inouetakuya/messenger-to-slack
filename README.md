@@ -43,6 +43,12 @@ bundle exec thor task:message:convert
 
 Access to [https://my.slack.com/services/import/csv](https://my.slack.com/services/import/csv)
 
+## Debugging
+
+```
+bundle exec pry
+```
+
 ## Testing
 
 ```
