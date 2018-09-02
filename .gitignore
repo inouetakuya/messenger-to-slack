@@ -12,4 +12,6 @@
 /tmp/
 /vendor/
 
+!.gitkeep
+
 /.env
