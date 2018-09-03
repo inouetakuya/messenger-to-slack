@@ -3,7 +3,7 @@ require 'json'
 
 class History
   class << self
-    def export_csv(channel: 'general')
+    def export_csv(channel: '#general')
       current = Time.current
 
       FileUtils.mkdir_p(csv_dir(current: current))
