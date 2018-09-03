@@ -9,7 +9,19 @@ class Message
 
   def initialize(sender_name:, timestamp_ms:, content:)
     @sender_name = sender_name
-    @timestamp_ms = @timestamp_ms
+    @timestamp_ms = timestamp_ms
     @content = content
+  end
+
+  def sender_name
+    Message.iso88591_to_utf8(@sender_name)
+  end
+
+  def timestamp
+    @timestamp_ms / 1000
+  end
+
+  def content
+    Message.iso88591_to_utf8(@content) unless @content.nil?
   end
 end
