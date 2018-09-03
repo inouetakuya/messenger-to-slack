@@ -3,7 +3,7 @@ require 'json'
 
 class History
   class << self
-    def export_csv(channel_name: 'general')
+    def export_csv(channel: 'general')
       current = Time.current
 
       FileUtils.mkdir_p(csv_dir(current: current))
@@ -17,12 +17,10 @@ class History
           )
 
           if message.content.present?
-            csv << [message.timestamp, channel_name, message.sender_name, message.content]
+            csv << [message.timestamp, channel, message.sender_name, message.content]
           end
         end
       end
-
-      parse_json['messages'].size
 
     rescue => exception
       FileUtils.rm_rf(csv_dir(current: current)) if Dir.exist?(csv_dir(current: current))

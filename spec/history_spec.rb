@@ -9,10 +9,6 @@ describe History do
         History.export_csv
       }.to change { Dir[File.join(History.dist_dir, '**/messages.csv')].size }
     end
-
-    it 'returns messages count' do
-      expect(History.export_csv).to be > 0
-    end
   end
 
   describe '.parse_json' do
