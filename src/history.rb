@@ -9,7 +9,7 @@ class History
       FileUtils.mkdir_p(csv_dir(current: current))
 
       CSV.open(csv_path(current: current), 'w') do |csv|
-        parse_json['messages'].each do |data|
+        parse_json['messages'].sort_by { |data| data['timestamp_ms'] }.each do |data|
           message = Message.new(
             sender_name: data['sender_name'],
             timestamp_ms: data['timestamp_ms'],
