@@ -1,6 +1,9 @@
 class Message
   class << self
     def iso88591_to_utf8(string)
+      # datetime - Convert milliseconds to formatted date in Rails - Stack Overflow
+      # https://stackoverflow.com/questions/18942816/convert-milliseconds-to-formatted-date-in-rails
+
       string.chars.map { |char|
         char.encode('ISO-8859-1').ord rescue char.ord
       }.pack('C*').force_encoding('utf-8')
