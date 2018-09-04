@@ -13,7 +13,7 @@ module Task
       say 'Converting tmp/message.json to CSV file ...'
 
       if options[:channel]
-        ::History.export_csv(channel: options[:channel])
+        ::History.export_csv(channel: options[:channel].match /\A#/ ? options[:channel] : '#' + options[:channel])
       else
         ::History.export_csv
       end
