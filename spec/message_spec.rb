@@ -42,14 +42,10 @@ describe Message do
   end
 
   describe '#validate_sender_name!' do
-    context 'sender_naem にマルチバイト文字が含まれているとき' do
-      let(:message) {
-        Message.new(
-          sender_name: "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084",
-          timestamp_ms: 1535898453797,
-          content: "ã\u0082\u0082ã\u0081¡ã\u0082\u008Dã\u0082\u0093ã\u0081§ã\u0081\u0099ï¼\u0081",
-        )
-      }
+    context 'sender_name にマルチバイト文字が含まれているとき' do
+      before do
+        allow(message).to receive(:sender_name).and_return('いのうえ たくや')
+      end
 
       it '例外が発生する' do
         expect {

@@ -1,3 +1,5 @@
+require 'miyabi'
+
 class Message
   class << self
     def iso88591_to_utf8(string)
@@ -17,7 +19,10 @@ class Message
   end
 
   def sender_name
-    Message.iso88591_to_utf8(@sender_name)
+    @_sender_name ||= begin
+      name = Message.iso88591_to_utf8(@sender_name)
+      name.match(/\A[\w\.\-_]+\z/) ? name : convert_to_roman(name)
+    end
   end
 
   def timestamp
@@ -26,6 +31,12 @@ class Message
 
   def content
     Message.iso88591_to_utf8(@content) unless @content.nil?
+  end
+
+  def convert_to_roman(name)
+    name.to_kanhira.to_roman
+  rescue Mechanize::ResponseCodeError
+    name.to_roman
   end
 
   def validate_sender_name!
