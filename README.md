@@ -38,7 +38,7 @@ TODO ...
 ### Step 3. Convert to CSV
 
 ```
-bundle exec thor task:message:convert
+bundle exec thor task:history:csv
 ```
 
 ### Step 4. Import CSV to Slack
