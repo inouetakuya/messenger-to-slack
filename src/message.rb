@@ -27,4 +27,16 @@ class Message
   def content
     Message.iso88591_to_utf8(@content) unless @content.nil?
   end
+
+  def validate_sender_name!
+    if sender_name.blank?
+      raise'sender_name が入っていません'
+    end
+
+    unless sender_name.match(/\A[\w\.\-_]+\z/)
+      raise "sender_name は半角英数字、ピリオド、ハイフン、アンダースコア以外が入っていると Slack インポート時にマッピングできません: #{sender_name}"
+    end
+
+    true
+  end
 end

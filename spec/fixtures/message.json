@@ -1,7 +1,7 @@
 {
   "messages": [
     {
-      "sender_name": "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084",
+      "sender_name": "inouetakuya",
       "timestamp_ms": 1535898457847,
       "sticker": {
         "uri": "messages/stickers_used/851582_369239386556143_1497813874_n_369239383222810.png"
@@ -9,22 +9,22 @@
       "type": "Generic"
     },
     {
-      "sender_name": "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084",
+      "sender_name": "inouetakuya",
       "timestamp_ms": 1535898453797,
       "content": "\u00e3\u0082\u0082\u00e3\u0081\u00a1\u00e3\u0082\u008d\u00e3\u0082\u0093\u00e3\u0081\u00a7\u00e3\u0081\u0099\u00ef\u00bc\u0081",
       "type": "Generic"
     },
     {
-      "sender_name": "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084",
+      "sender_name": "inouetakuya",
       "timestamp_ms": 1535898441601,
       "content": "\u00e4\u00bb\u00a5\u00e9\u0099\u008d\u00e3\u0081\u00ae\u00e3\u0083\u00a1\u00e3\u0083\u0083\u00e3\u0082\u00bb\u00e3\u0083\u00bc\u00e3\u0082\u00b8\u00e3\u0081\u00af Slack \u00e3\u0081\u00a7\u00e3\u0081\u008a\u00ef\u00bd\u008b\u00ef\u00bc\u009f",
       "type": "Generic"
     }
   ],
   "participants": [
-    "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084"
+    "inouetakuya"
   ],
-  "title": "\u00e3\u0081\u0084\u00e3\u0081\u00ae\u00e3\u0081\u0086\u00e3\u0081\u0088 \u00e3\u0081\u009f\u00e3\u0081\u008f\u00e3\u0082\u0084",
+  "title": "inouetakuya",
   "is_still_participant": true,
   "thread_type": "Regular",
   "thread_path": "abc_f469469d47"

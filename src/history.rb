@@ -16,7 +16,7 @@ class History
             content: data['content'],
           )
 
-          if message.content.present?
+          if message.content.present? && message.validate_sender_name!
             csv << [message.timestamp, channel, message.sender_name, message.content]
           end
         end
