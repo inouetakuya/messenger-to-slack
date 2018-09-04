@@ -48,6 +48,7 @@ class Message
   private
 
   def convert_to_roman(name)
+    # ネットワークを使い、とても時間がかかるため、可能であれば、事前に message.json を置換しておいたほうがよい
     name.to_kanhira.to_roman
 
   rescue Mechanize::ResponseCodeError
