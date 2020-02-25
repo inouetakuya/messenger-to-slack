@@ -34,7 +34,7 @@ GEM
       mechanize (= 2.7.5)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
-    nokogiri (1.10.4)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     pry (0.11.3)
